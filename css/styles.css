@@ -430,9 +430,9 @@ footer {
 
 #typing-cursor {
     display: inline-block;
-    width: 0.7em;
+    width: 0.5em;
     height: 1em;
-    background: #99a3f5;
+    background: #19a137;
     margin-left: 0.1em;
     vertical-align: middle;
     animation: blink-cursor 0.8s steps(1) infinite;
