@@ -40,7 +40,6 @@
                 <h1 style="display: block; font-size: 3.5rem; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; font-weight: 700; letter-spacing: normal; line-height: 1.2;">
                     <span id="typing-animation" class="highlight"></span><span id="typing-cursor"></span>
                 </h1>
-                <h1 style="display:none; font-size: 3.5rem; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; font-weight: 700; letter-spacing: normal; line-height: 1.2;">Hi, I'm Kevin Jia</span></h1>
                 <p class="subtitle">Software & Hardware Developer</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary">View Projects</a>
@@ -206,13 +205,6 @@
                 target.textContent += text.charAt(i);
                 i++;
                 setTimeout(type, 80);
-            } else {
-                // After typing, fade out and show the main hero title
-                setTimeout(() => {
-                    target.parentElement.style.display = 'none';
-                    target.parentElement.nextElementSibling.style.display = '';
-                    // Cursor will remain visible
-                }, 700);
             }
         }
         if (cursor) cursor.style.display = 'inline-block';
