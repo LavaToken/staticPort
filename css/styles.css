@@ -192,10 +192,16 @@ section h2 {
 /* Projects Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card {
