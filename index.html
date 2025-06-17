@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Jia - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="#home">Kevin Jia</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="https://photos.app.goo.gl/8QnXQYQZQZQZQZQZQ" target="_blank" class="photos-btn">Photography</a>
+                    <a href="https://docs.google.com/document/d/1T5Q3fOj5vwIeUG6gXJ_MeGLwLf-r9CiZx8slzoa4-Yg/edit?usp=sharing" target="_blank" class="resume-btn">Resume</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Kevin Jia</span></h1>
+                <p class="subtitle">Software & Hardware Developer</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a second year Computer Engineering major @ UC Davis. As a passionate developer with expertise in both software and hardware development, I love creating innovative solutions and bringing exciting ideas to life!</p>
+                    <p>In my free time, I enjoy photography shoots, speedcubing, and tinkering with mechanical keyboards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project cards will be added here -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/placeholder.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>ClimateAware</h3>
+                        <p>A website built for homeowners that track current and historical climate, disaster, and geographical data anywhere in the location and provides a detailed report on danger levels and prevantative measures.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Google Earth Engine</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">View Demo</a>
+                            <a href="#" class="btn small">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <!-- Add more languages -->
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware</h3>
+                    <ul>
+                        <li>Arduino</li>
+                        <li>Raspberry Pi</li>
+                        <li>STM32</li>
+                        <li>PCB Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>VSCode</li>
+                        <li>STM32IDE</li>
+                        <li>KiCAD</li>
+                        <li>Firebase</li>
+                        <li>Figma</li>
+                        <!-- Add more tools -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:kevinjia05@gmail.com">kevinjia05@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/LavaToken" target="_blank">GitHub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/kevin-jia-4120a2193/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Kevin Jia. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/LavaToken" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-jia-4120a2193/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
