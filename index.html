@@ -37,7 +37,8 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Kevin Jia</span></h1>
+                <h1><span id="typing-animation"></span></h1>
+                <h1 style="display:none;">Hi, I'm <span class="highlight">Kevin Jia</span></h1>
                 <p class="subtitle">Software & Hardware Developer</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary">View Projects</a>
@@ -191,5 +192,27 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Typing animation for 'kevin jia - portfolio'
+    window.addEventListener('DOMContentLoaded', function() {
+        const text = 'kevin jia - portfolio';
+        const target = document.getElementById('typing-animation');
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                target.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 80);
+            } else {
+                // After typing, fade out and show the main hero title
+                setTimeout(() => {
+                    target.parentElement.style.display = 'none';
+                    target.parentElement.nextElementSibling.style.display = '';
+                }, 700);
+            }
+        }
+        type();
+    });
+    </script>
 </body>
 </html> 
