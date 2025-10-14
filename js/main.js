@@ -40,11 +40,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add active class to navigation links on scroll
-const sections = document.querySelectorAll('section');
-const navItems = document.querySelectorAll('.nav-links a');
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Add active class to navigation links on scroll
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+    const header = document.querySelector('header');
+    const hero = document.querySelector('.hero');
 
-window.addEventListener('scroll', () => {
+    // Debug: Check if elements exist
+    console.log('Header element:', header);
+    console.log('Hero element:', hero);
+    console.log('Hero height:', hero ? hero.offsetHeight : 'Hero not found');
+
+    // Test: Add click handler to test header animation
+    document.addEventListener('click', function() {
+        console.log('Click detected - toggling header');
+        header.classList.toggle('visible');
+    });
+
+    window.addEventListener('scroll', () => {
     let current = '';
     
     sections.forEach(section => {
@@ -62,7 +77,24 @@ window.addEventListener('scroll', () => {
             item.classList.add('active');
         }
     });
-});
+
+    // Apple-style header behavior: show header when scrolled past hero section
+    if (hero && header) {
+        const heroHeight = hero.offsetHeight;
+        const scrollThreshold = heroHeight * 0.8; // Show header when 80% past hero
+        
+        console.log('Scroll Y:', window.scrollY, 'Hero Height:', heroHeight, 'Threshold:', scrollThreshold);
+        
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('visible');
+            console.log('Header should be visible');
+        } else {
+            header.classList.remove('visible');
+            console.log('Header should be hidden');
+        }
+    }
+    });
+}); // Close DOMContentLoaded
 
 // Add animation to elements when they come into view
 const observerOptions = {
