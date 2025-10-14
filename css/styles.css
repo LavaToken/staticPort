@@ -28,8 +28,8 @@ body {
 /* Navigation */
 header {
     position: fixed;
-    width: auto;
-    max-width: 600px;
+    width: calc(100% - 40px);
+    max-width: 1200px;
     left: 50%;
     transform: translateX(-50%);
     top: -200px;
