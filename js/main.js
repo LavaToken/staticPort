@@ -1,24 +1,4 @@
-// Mobile Navigation
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const links = document.querySelectorAll('.nav-links li');
-
-hamburger.addEventListener('click', () => {
-    // Toggle navigation
-    navLinks.classList.toggle('nav-active');
-    
-    // Animate links
-    links.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = '';
-        } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-        }
-    });
-
-    // Hamburger animation
-    hamburger.classList.toggle('toggle');
-});
+// Mobile Navigation - Removed since nav-links were removed from HTML
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -32,10 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             
-            // Close mobile menu if open
-            if (navLinks.classList.contains('nav-active')) {
-                hamburger.click();
-            }
+            // Mobile menu functionality removed
         }
     });
 });
@@ -44,7 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', function() {
     // Add active class to navigation links on scroll
     const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.nav-links a');
+    // Navigation items removed since nav-links were removed
     const header = document.querySelector('header');
     const hero = document.querySelector('.hero');
 
@@ -71,12 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href').slice(1) === current) {
-            item.classList.add('active');
-        }
-    });
+    // Navigation active state removed since nav-links were removed
 
     // Apple-style header behavior: show header when scrolled past hero section
     if (hero && header) {
@@ -117,55 +89,4 @@ document.querySelectorAll('section, .project-card').forEach(element => {
     observer.observe(element);
 });
 
-// Add CSS for mobile navigation
-const style = document.createElement('style');
-style.textContent = `
-    .nav-links {
-        position: fixed;
-        right: 0;
-        height: 100vh;
-        top: 0;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        z-index: 999;
-    }
-
-    .nav-active {
-        transform: translateX(0%);
-    }
-
-    .toggle span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .toggle span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .toggle span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .nav-links a.active {
-        color: var(--primary-color);
-    }
-`;
-
-document.head.appendChild(style); 
+// Mobile navigation CSS removed since nav-links were removed from HTML 
